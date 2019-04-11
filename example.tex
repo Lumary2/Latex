@@ -1,0 +1,73 @@
+\documentclass[]{report}
+\usepackage{graphicx}
+
+%use this exact command. The style and bibliographystyle has to be authoryear (Havard). The sorting is nyt: name, year, title so that the bibliography is sorted alphabetically. firstinits=true shortens the names: Albert Einstein -> A. Einstein
+\usepackage[backend=bibtex,style=authoryear,bibstyle=authoryear,sorting=nyt,firstinits=true]{biblatex}
+
+%this attaches your bib-file, your bibliography (must be in the same folder)
+\addbibresource{sample.bib} 
+
+
+% Title Page
+\title{Welcome to Latex}
+\author{Anja}
+
+
+\begin{document}
+\maketitle
+\tableofcontents %creates a table of contents
+
+\newpage %following content will start on a new page
+\chapter{Conceptual Design}
+\section{Objective}
+\subsection{Context}
+Today more and more people are using smartphones every day.\\
+The smartphone has become a necessity for almost all of us that a person cannot go on with his daily tasks without one~\parencite{Einstein}.
+\subsection{Problem}
+What are the greatest software security risks for smartphones~\parencite{Burnette}?
+
+\subsection{Definitions}
+
+\begin{tabular}{l|p{90mm}}
+	\\
+	\textbf{Term}&\textbf{Definition} \\
+	\\
+	\hline
+	\\
+	software security risks&actions that threat the integrity, availability, and confidentiality of information system resources of an automated information   
+	system(includes hardware, software, firmware, information / data, and 
+	telecommunications)\\
+	\\
+	\hline
+	\\
+	User&A person using a smartphone in a legal way\\
+	\\
+	
+\end{tabular}
+
+\newpage
+
+\subsection{Planning}
+We will analyze the results by collecting and comparing the information we found, looking for contradictions and similarities, e.g. We will use the following search terms, e.g.:
+\begin{itemize}
+	\item security risks
+	\item financial damage
+	\item user influence
+\end{itemize}
+
+\begin{figure}[h]%h="here",keeps picture at the desired spot
+	\includegraphics[scale=0.1]{newYear}
+	
+	\caption{Happy new year!
+		}
+	\label{fig:newYear}
+	
+\end{figure}
+
+\begin{flushleft}
+	Figure \ref{fig:newYear} shows the new year`s fireworks.
+\end{flushleft} 
+
+\printbibliography
+
+\end{document}          
